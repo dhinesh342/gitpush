@@ -161,10 +161,39 @@
 //     console.log("Hi");
 // }
 
-let num=[0,1,2,3,4,5]
+let num=[0,6,2,1,9,4,5,2,4]
 // let slicearr=num.slice(1,3); //slice are methods that returns a shallow copy array.slice(startindex,endindex)
 // console.log(slicearr);
 let arr=['q','f','j'];
-num.splice(1,0,...arr);
-console.log(num);
+// num.splice(1,0,...arr);
+// console.log(num);
+// console.log(num.sort((a,b)=> b-a));
 
+// function mysort(a,b){
+//     if(a<b){
+//         return 1
+//     }
+//     return -1;
+// }
+
+// var varname=10;
+// function a(){
+//     console.log(varname);
+// }
+// function b(){
+//     var varname=20;
+//     a();
+//     console.log(varname);
+// }
+// b();
+
+let a;
+console.log(a);
+
+function b(){
+    console.log(a);
+    a=3;
+}
+
+a=2;
+b();
