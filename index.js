@@ -196,4 +196,4 @@ function b(){
 }
 
 a=2;
-b();
+b(); //done
