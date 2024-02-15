@@ -187,13 +187,81 @@ let arr=['q','f','j'];
 // }
 // b();
 
-let a;
-console.log(a);
+// let a;
+// console.log(a);
 
-function b(){
-    console.log(a);
-    a=3;
+// function b(){
+//     console.log(a);
+//     a=3;
+// }
+
+// a=2;
+// b(); //done
+
+// function (){}
+// function B(){}
+
+// A.prototype=B.prototype={};
+
+// let a= new A();
+// console.log(a instanceof B);
+
+// function modifier(a,b){
+//     a=10;
+//     b=20;
+// }
+
+// let p=[1,2,3];
+// let q=[4,5,6];
+// modifier(p,q);
+// console.log(p,q);
+// function f(y, x) {
+//     // Write your solution here ========================
+//     if (arguments.length === 2) {
+//         return x * y;
+//     } else if (arguments.length === 1) {
+//         return function (newY) {
+//             return x * newY;
+//         };
+//     }
+// }
+
+// console.log(f(2)(3));
+
+let q=[4,5,6];
+function even(e){
+    return e>12;
 }
+//Array.some method polyfills
+Array.prototype.mysome=function(e){
+    let arr=this;
+    let flag=false;
+    for(let i=0;i<arr.length;i++){
+        if(e(arr[i])){
+            console.log(true);
+            flag=true;
+            break;
+        }
+    }
+    if(!flag){
+        console.log(false);
+    }
+    
+}
+q.mysome(even);
 
-a=2;
-b(); //done
+// function fn(){
+//     let count=1;
+//     function infun(v){
+//         if(v==0){
+//             return count;
+//         }
+//         count++;
+//         return infun;
+//     }
+
+//     return infun;
+// }
+
+
+// console.log(fn()()(0));
